@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hands For An African Child</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="images/chcf.webp">
+  <meta property="og:title" content="Hands For An African Child">
+  <meta property="og:description" content="Hands For An African Child">
+  <meta property="og:image" content="https://imgur.com/a/Tlx0fqN">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1c1f24;
+            color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container1{
+            max-width: 900px;
+            width: 90%;
+            margin-top: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #00d1b2;
+        }
+        p.intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+        .crypto-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        @media (min-width: 768px) {
+            .crypto-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .crypto-card {
+            background: #2c3138;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .crypto-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+        .crypto-icon {
+            height: 100px;
+            width: 100px;
+            margin-bottom: 15px;
+        }
+        .crypto-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #00bfff;
+        }
+        .wallet-address {
+            background: #ffffff14;
+            border: 1px solid #444;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 0.9rem;
+            color: #ddd;
+            margin-bottom: 15px;
+            word-break: break-all;
+        }
+        .copy-button {
+            background-color: #00d1b2;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        .copy-button:hover {
+            background-color: #00bfa5;
+        }
+        .upload-section {
+            margin-top: 50px;
+            background: #2c3138;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+        .upload-section h2 {
+            color: #00d1b2;
+            font-size: 1.8rem;
+        }
+        .upload-section p {
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+        .file-input {
+            display: block;
+            margin: 10px auto 20px auto;
+            padding: 10px;
+            background-color: #ffffff14;
+            border: 1px solid #444;
+            border-radius: 10px;
+            color: #ddd;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .upload-button {
+            background-color: #00d1b2;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        .upload-button:hover {
+            background-color: #00bfa5;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #888;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container container1">
+        <h1>Pay with Crypto</h1>
+        <p class="intro">We accept payments in various cryptocurrencies! 💖 Simply copy the wallet address below for your chosen currency and complete your transaction.</p>
+        <div class="crypto-list">
+            <!-- Bitcoin -->
+            <div class="crypto-card">
+                <img class="crypto-icon" src="https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=022" alt="Bitcoin">
+                <div class="crypto-name">Bitcoin (BTC)</div>
+                <div class="wallet-address" id="btcAddress">1HunL6nu6ZLqrgXPzPvLcb3Lc6JviMDy9c</div>
+                <button class="copy-button" onclick="copyToClipboard('btcAddress')">Copy Wallet Address</button>
+            </div>
+            <!-- Ethereum -->
+            <div class="crypto-card">
+                <img class="crypto-icon" src="https://cryptologos.cc/logos/ethereum-eth-logo.png?v=022" alt="Ethereum">
+                <div class="crypto-name">Ethereum (ETH)</div>
+                <div class="wallet-address" id="ethAddress">0x54070e979527310b8f959a3532058813b1d664b7</div>
+                <button class="copy-button" onclick="copyToClipboard('ethAddress')">Copy Wallet Address</button>
+            </div>
+            <!-- Tether -->
+            <div class="crypto-card">
+                <img class="crypto-icon" src="https://cryptologos.cc/logos/tether-usdt-logo.png?v=022" alt="Tether">
+                <div class="crypto-name">Tether (USDT)</div>
+                <div class="wallet-address" id="usdtAddress">0x54070e979527310b8f959a3532058813b1d664b7</div>
+                <button class="copy-button" onclick="copyToClipboard('usdtAddress')">Copy Wallet Address</button>
+            </div>
+            <!-- Binance Coin -->
+            <div class="crypto-card">
+                <img class="crypto-icon" src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png?v=022" alt="Binance Coin">
+                <div class="crypto-name">Binance Coin (BNB)</div>
+                <div class="wallet-address" id="bnbAddress">0x54070e979527310b8f959a3532058813b1d664b7</div>
+                <button class="copy-button" onclick="copyToClipboard('bnbAddress')">Copy Wallet Address</button>
+            </div>
+        </div>
+        <!-- Gift Card Upload Section -->
+        <!-- <div class="upload-section">
+            <h2>Send Gift Cards</h2>
+            <p>Upload Steam cards, gift cards, or other payment cards. We'll process them quickly!</p>
+            <form action="your-email-processing-endpoint" method="POST" enctype="multipart/form-data">
+                <input type="file" name="giftCard" class="file-input" required>
+                <button type="submit" class="upload-button">Upload Card</button>
+            </form>
+        </div> -->
+    </div>
+    <footer>
+        &copy; 2024 Crypto Payments | Designed with  for seamless transactions
+    </footer>
+    <script>
+        function copyToClipboard(id) {
+            const text = document.getElementById(id).textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Wallet address copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
